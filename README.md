@@ -1,2 +1,2 @@
 # LearningUnity
-Repository for Unity learning projects
+Repository for educational Unity projects
