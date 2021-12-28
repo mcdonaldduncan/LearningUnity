@@ -46,13 +46,14 @@ public class Bird : MonoBehaviour
 
     void OnMouseDrag()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
 
         Vector2 desiredPosition = mousePosition;
         if (desiredPosition.x > _startPosition.x)
             desiredPosition.x = _startPosition.x;
 
         _rigidbody2D.position = desiredPosition;
+
     }
 
     // Update is called once per frame
