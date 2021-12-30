@@ -13,8 +13,6 @@ public class Bird : MonoBehaviour
     SpriteRenderer _spriteRenderer;
     bool _isFlying;
 
-
-
     //Caching
     void Awake()
     {
@@ -22,7 +20,6 @@ public class Bird : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _startPosition = _rigidbody2D.position;
@@ -46,11 +43,9 @@ public class Bird : MonoBehaviour
         _spriteRenderer.color = Color.white;
     }
 
-    
-
     void OnMouseDrag()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 desiredPosition = mousePosition;
 
         float distance = Vector2.Distance(desiredPosition, _startPosition);
@@ -68,7 +63,6 @@ public class Bird : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -78,6 +72,19 @@ public class Bird : MonoBehaviour
                 BirdDive();
             }
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (_isFlying)
+            {
+                BirdExplode();
+            }
+        }
+    }
+
+    void BirdExplode()
+    {
+        //needs implementation
+        var currentPosition = _rigidbody2D.position;
     }
 
     void BirdDive()
