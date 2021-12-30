@@ -11,6 +11,7 @@ public class Bird : MonoBehaviour
     Vector2 _startPosition;
     Rigidbody2D _rigidbody2D;
     SpriteRenderer _spriteRenderer;
+    bool _isFlying;
 
 
 
@@ -41,9 +42,11 @@ public class Bird : MonoBehaviour
 
         _rigidbody2D.isKinematic = false;
         _rigidbody2D.AddForce(direction * _launchForce);
-
+        _isFlying = true;
         _spriteRenderer.color = Color.white;
     }
+
+    
 
     void OnMouseDrag()
     {
@@ -68,8 +71,19 @@ public class Bird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (_isFlying)
+            {
+                BirdDive();
+            }
+        }
+    }
 
-        
+    void BirdDive()
+    {
+        var currentPosition = _rigidbody2D.position;
+        _rigidbody2D.AddForce(Vector2.down * _launchForce);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -83,6 +97,7 @@ public class Bird : MonoBehaviour
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
+        _isFlying = false;
 
     }
 }
