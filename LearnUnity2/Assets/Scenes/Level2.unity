@@ -641,7 +641,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!60 &181109429
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -692,7 +692,7 @@ PolygonCollider2D:
       - {x: 0.16, y: -0.39}
       - {x: 0.21, y: -0.38}
       - {x: 0.26, y: -0.31}
-      - {x: 0.26, y: -0.24}
+      - {x: 0.30012012, y: -0.30200374}
       - {x: 0.5, y: -0.17999999}
 --- !u!95 &181109430
 Animator:
@@ -11200,7 +11200,7 @@ GameObject:
   - component: {fileID: 1320525837}
   - component: {fileID: 1320525836}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LevelController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11218,7 +11218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872ff59f67231b947a2252eda505ae0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextLevelName: Level1
+  _nextLevelName: Level3
 --- !u!4 &1320525837
 Transform:
   m_ObjectHideFlags: 0

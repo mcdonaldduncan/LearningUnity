@@ -12,6 +12,7 @@ public class Bird : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     SpriteRenderer _spriteRenderer;
     bool _isFlying;
+    float _startOrientation;
 
     //Caching
     void Awake()
@@ -22,6 +23,7 @@ public class Bird : MonoBehaviour
 
     void Start()
     {
+        _startOrientation = _rigidbody2D.rotation;
         _startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true;
     }
@@ -40,6 +42,7 @@ public class Bird : MonoBehaviour
         _rigidbody2D.isKinematic = false;
         _rigidbody2D.AddForce(direction * _launchForce);
         _isFlying = true;
+        _rigidbody2D.freezeRotation = false;
         _spriteRenderer.color = Color.white;
     }
 
@@ -85,6 +88,9 @@ public class Bird : MonoBehaviour
     {
         //needs implementation
         var currentPosition = _rigidbody2D.position;
+        //Create 6 new game objects, launch at 360, 300, 240, 180, 120, 60 degree angles
+        //Set bird inactive
+        StartCoroutine(ResetAfterDelay(5));
     }
 
     void BirdDive()
@@ -95,15 +101,17 @@ public class Bird : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(ResetAfterDelay());        
+        StartCoroutine(ResetAfterDelay(3));        
     }
 
-    IEnumerator ResetAfterDelay()
+    IEnumerator ResetAfterDelay(int seconds)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(seconds);
         _rigidbody2D.position = _startPosition;
         _rigidbody2D.isKinematic = true;
         _rigidbody2D.velocity = Vector2.zero;
+        _rigidbody2D.rotation = _startOrientation;
+        _rigidbody2D.freezeRotation = true;
         _isFlying = false;
 
     }
