@@ -70,3 +70,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+LearnUnity2/Library/il2cpp_cache/linkresult_C41163B543AF9B78144DCA41A7C510C8/build.bc
+LearnUnity2/Library/Il2cppBuildCache/WebGL/Native/build.bc
