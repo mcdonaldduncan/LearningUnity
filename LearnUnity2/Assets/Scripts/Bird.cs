@@ -95,7 +95,6 @@ public class Bird : MonoBehaviour
 
     void BirdDive()
     {
-        var currentPosition = _rigidbody2D.position;
         _rigidbody2D.AddForce(Vector2.down * _launchForce);
     }
 
@@ -115,4 +114,6 @@ public class Bird : MonoBehaviour
         _isFlying = false;
 
     }
+
+    
 }
