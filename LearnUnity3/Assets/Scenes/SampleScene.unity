@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8741af936d6274a9bf0e7fe5135737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splatterCount: 1000
+  splatterCount: 500
 --- !u!114 &1691493373
 MonoBehaviour:
   m_ObjectHideFlags: 0
