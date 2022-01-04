@@ -47,11 +47,11 @@ public class RandomMover : MonoBehaviour
 
             //random doesnt seem random, always going down to left(-1,-1), using (-1,1).
             //Found out I was using an ovld that used max exclusive,
-            //inclusive on -1, 1 using int. must specify 1f
+            //exclusive on -1, 1 using int. must specify 1f
 
-            location.x += incrementx;
-            location.y += incrementy;
-            intromover.transform.position += location * Time.deltaTime;
+            location.x += incrementx * Time.deltaTime;
+            location.y += incrementy * Time.deltaTime;
+            intromover.transform.position += location;
         }
 
         void CheckEdges()
