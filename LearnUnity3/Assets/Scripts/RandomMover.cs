@@ -5,6 +5,8 @@ using UnityEngine;
 public class RandomMover : MonoBehaviour
 {
     Mover mover;
+    //int[] numbers = new[] { 1, 1, 2, 3, 3 };
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,8 @@ public class RandomMover : MonoBehaviour
     void FixedUpdate()
     {
         mover.Walk();
+        //int randomInt = Random.Range(0, numbers.Length);
+        //Debug.Log(numbers[randomInt]);
     }
 
 
@@ -30,16 +34,21 @@ public class RandomMover : MonoBehaviour
         {
             FindWindowLimits();
             location = Vector2.zero;
-            Renderer r = intromover.GetComponent<Renderer>();
-            r.material = new Material(Shader.Find("Diffuse"));
+            Renderer renderer = intromover.GetComponent<Renderer>();
+            //Rigidbody rigidbody = intromover.GetComponent<Rigidbody>();
+            renderer.material = new Material(Shader.Find("Diffuse"));
         }
 
         void Step()
         {
             location = intromover.transform.position;
-            float incrementx = Random.Range(-1, 2);
-            float incrementy = Random.Range(-1, 2);
-            //random doesnt seem random, always going down to left(-1,-1), using (-1,1)
+            float incrementx = Random.Range(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            float incrementy = Random.Range(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+
+            //random doesnt seem random, always going down to left(-1,-1), using (-1,1).
+            //Found out I was using an ovld that used max exclusive,
+            //inclusive on -1, 1 using int. must specify 1f
+
             location.x += incrementx;
             location.y += incrementy;
             intromover.transform.position += location * Time.deltaTime;
@@ -77,7 +86,14 @@ public class RandomMover : MonoBehaviour
         public void Walk()
         {
             Step();
+            //Draw();
             CheckEdges();
+        }
+
+        public void Draw()
+        {
+            GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            sphere.transform.position = new Vector3(intromover.transform.position.x, intromover.transform.position.y, 0f);
         }
     }
 }
