@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class GaussianSplatter : MonoBehaviour
 {
-    [SerializeField]public int splatterCount = 1000;
+    [SerializeField] int splatterCount = 1000;
 
     List<GameObject> splatters = new List<GameObject>();
-   
+    float x;
+    float y;
+    Vector2 windowBounds; 
+
+    private void Start()
+    {
+        FindWindowLimits();
+        x = windowBounds.x;
+        y = windowBounds.y;
+        
+
+    }
+
     void FixedUpdate()
     {
         Splat();
@@ -21,8 +33,7 @@ public class GaussianSplatter : MonoBehaviour
             GameObject @object = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             Renderer renderer = @object.GetComponent<Renderer>();
             renderer.material = new Material(Shader.Find("Diffuse"));
-            Collider collider = @object.GetComponent<Collider>();
-            var location = GaussianVector(-30f, 30f);
+            var location = GaussianVector(x, y);
             @object.transform.position = location;
             splatters.Add(@object);
         }
@@ -33,16 +44,22 @@ public class GaussianSplatter : MonoBehaviour
 
     //void Shade()
     //{
-    //    foreach (var i in splatters)
+    //    foreach (var splatter in splatters)
     //    {
            
     //    }
     //}
 
-    Vector3 GaussianVector(float negativeBound, float positiveBound)
+    Vector3 GaussianVector(float width, float height)
     {
-        var gaussianVector = new Vector3(Random.Range(Random.Range(negativeBound, positiveBound), Random.Range(negativeBound, positiveBound)), Random.Range(Random.Range(negativeBound, positiveBound), Random.Range(negativeBound, positiveBound)), 0f);
+        var gaussianVector = new Vector3(Random.Range(Random.Range(-width, width), Random.Range(-width, width)), Random.Range(Random.Range(-height, height), Random.Range(-height, height)), 0f);
         return gaussianVector;
+    }
+
+    void FindWindowLimits()
+    {
+        Camera.main.orthographic = true;
+        windowBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
     }
 
 

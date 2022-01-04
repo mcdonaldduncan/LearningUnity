@@ -5,7 +5,7 @@ using UnityEngine;
 public class RandomMover : MonoBehaviour
 {
     Mover mover;
-    //int[] numbers = new[] { 1, 1, 2, 3, 3 };
+    int[] numbers = new[] { 1, 1, 2, 3, 3 };
     
 
     // Start is called before the first frame update
@@ -19,8 +19,8 @@ public class RandomMover : MonoBehaviour
     void FixedUpdate()
     {
         mover.Walk();
-        //int randomInt = Random.Range(0, numbers.Length);
-        //Debug.Log(numbers[randomInt]);
+        int randomInt = Random.Range(0, numbers.Length);
+        Debug.Log(numbers[randomInt]);
     }
 
 
@@ -80,7 +80,6 @@ public class RandomMover : MonoBehaviour
             Camera.main.orthographic = true;
             minimumPosition = Camera.main.ScreenToWorldPoint(Vector2.zero);
             maximumPosition = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-            //is screentoworldpoint necessary here?
         }
 
         public void Walk()

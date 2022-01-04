@@ -57,18 +57,18 @@ public class PerlinMover : MonoBehaviour
             {
                 location = Vector2.zero;
             }
-            else if (location.x < minimumPosition.x)
-            {
-                location = Vector2.zero;
-            }
+            //else if (location.x < minimumPosition.x)
+            //{
+            //    location = Vector2.zero;
+            //}
             if (location.y > maximumPosition.y)
             {
                 location = Vector2.zero;
             }
-            else if (location.y < minimumPosition.y)
-            {
-                location = Vector2.zero;
-            }
+            //else if (location.y < minimumPosition.y)
+            //{
+            //    location = Vector2.zero;
+            //}
             introMover.transform.position = location;
         }
 
