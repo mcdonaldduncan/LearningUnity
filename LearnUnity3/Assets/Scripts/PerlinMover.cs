@@ -77,7 +77,6 @@ public class PerlinMover : MonoBehaviour
             Camera.main.orthographic = true;
             minimumPosition = Camera.main.ScreenToWorldPoint(Vector2.zero);
             maximumPosition = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-            //is screentoworldpoint necessary here?
         }
 
         public void Walk()
