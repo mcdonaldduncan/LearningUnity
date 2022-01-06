@@ -5,35 +5,17 @@ using UnityEngine;
 public class ShaderScript : MonoBehaviour
 {
     [SerializeField] int collisionCounter;
-    //[SerializeField] Material material;
     [SerializeField] Renderer r;
     
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    collisionCounter++;
-    //    Debug.Log("collision detected");
-    //}
-
     private void OnCollisionEnter(Collision collision)
     {
         collisionCounter++;
         Debug.Log("collision detected");
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
         Shade();
-
-
     }
 
     void Shade()
@@ -41,53 +23,46 @@ public class ShaderScript : MonoBehaviour
         if (collisionCounter == 0)
         {
             r.material.color = new Color32(42, 72, 88, 1);
-
         }
-
         if (collisionCounter >= 1)
         {
             r.material.color = new Color32(37, 85, 102, 1);
-            if (collisionCounter >= 2)
-            {
-                r.material.color = new Color32(28, 99, 115, 1);
-                if (collisionCounter >= 3)
-                {
-                    r.material.color = new Color32(11, 113, 126, 1);
-                    if (collisionCounter >= 4)
-                    {
-                        r.material.color = new Color32(0, 127, 134, 1);
-                        if (collisionCounter >= 5)
-                        {
-                            r.material.color = new Color32(0, 141, 140, 1);
-                            if (collisionCounter >= 6)
-                            {
-                                r.material.color = new Color32(0, 156, 143, 1);
-                                if (collisionCounter >= 7)
-                                {
-                                    r.material.color = new Color32(35, 170, 143, 1);
-                                    if (collisionCounter >= 8)
-                                    {
-                                        r.material.color = new Color32(63, 183, 141, 1);
-                                        if (collisionCounter >= 9)
-                                        {
-                                            r.material.color = new Color32(91, 196, 137, 1);
-                                            if (collisionCounter >= 10)
-                                            {
-                                                r.material.color = new Color32(119, 209, 131, 1);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-            }
-
         }
-
-
-
+        if (collisionCounter >= 2)
+        {
+            r.material.color = new Color32(28, 99, 115, 1);
+        }
+        if (collisionCounter >= 3)
+        {
+            r.material.color = new Color32(11, 113, 126, 1);
+        }
+        if (collisionCounter >= 4)
+        {
+            r.material.color = new Color32(0, 127, 134, 1);
+        }
+        if (collisionCounter >= 5)
+        {
+            r.material.color = new Color32(0, 141, 140, 1);
+        }
+        if (collisionCounter >= 6)
+        {
+            r.material.color = new Color32(0, 156, 143, 1);
+        }
+        if (collisionCounter >= 7)
+        {
+            r.material.color = new Color32(35, 170, 143, 1);
+        }
+        if (collisionCounter >= 8)
+        {
+            r.material.color = new Color32(63, 183, 141, 1);
+        }
+        if (collisionCounter >= 9)
+        {
+            r.material.color = new Color32(91, 196, 137, 1);
+        }
+        if (collisionCounter >= 10)
+        {
+            r.material.color = new Color32(119, 209, 131, 1);
+        }
     }
 }
