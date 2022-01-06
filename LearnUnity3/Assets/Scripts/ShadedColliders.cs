@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShadedColliders : MonoBehaviour
 {
-    [SerializeField] int splatterCount = 1000;
+    [SerializeField] int splatterCount = 5000;
 
     List<GameObject> splatters = new List<GameObject>();
     GameObject prefab;
