@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 LearnUnity2/Library/il2cpp_cache/linkresult_C41163B543AF9B78144DCA41A7C510C8/build.bc
 LearnUnity2/Library/Il2cppBuildCache/WebGL/Native/build.bc
+LearnUnity3/Library/il2cpp_cache/linkresult_5B41D4E9A2F6BE370198B78B5739F2C1/build.bc
+LearnUnity3/Library/Il2cppBuildCache/WebGL/Native/build.bc
