@@ -85,22 +85,26 @@ public class ShaderScript : MonoBehaviour
 
         //r.material.SetColor("_Color",new Color(42, 72, 88));
 
+        if (collisionCounter == 0)
+        {
+            r.material.color = new Color32(42, 72, 88, 1);
 
-        r.material.color = new Color32(42, 72, 88, 1);
+        }
+        
 
-        if (collisionCounter == 1)
+        if (collisionCounter >= 1)
         {
             r.material.color = new Color32(37, 85, 102, 1);
-            if (collisionCounter == 2)
+            if (collisionCounter >= 2)
             {
                 r.material.color = new Color32(28, 99, 115, 1);
-                if (collisionCounter == 3)
+                if (collisionCounter >= 3)
                 {
                     r.material.color = new Color32(11, 113, 126, 1);
-                    if (collisionCounter == 4)
+                    if (collisionCounter >= 4)
                     {
                         r.material.color = new Color32(0, 127, 134, 1);
-                        if (collisionCounter > 4)
+                        if (collisionCounter >= 5)
                         {
                             r.material.color = new Color32(0, 141, 140, 1);
                         }
