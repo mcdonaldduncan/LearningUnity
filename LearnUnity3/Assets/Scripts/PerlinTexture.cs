@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Copy/Paste from Nature of Code
+
 public class PerlinTexture : MonoBehaviour
 {
     public int pixWidth;

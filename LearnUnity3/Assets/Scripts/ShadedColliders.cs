@@ -6,7 +6,6 @@ public class ShadedColliders : MonoBehaviour
 {
     [SerializeField] int splatterCount = 2000;
 
-
     List<GameObject> splatters = new List<GameObject>();
     GameObject prefab;
     Vector3 windowBounds;
@@ -17,32 +16,21 @@ public class ShadedColliders : MonoBehaviour
     {
         prefab = Resources.Load("Sphere") as GameObject;
         FindWindowLimits();
-
-        //for (int i = 0; i < splatterCount; i++)
-        //{
-        //    GameObject go = Instantiate(prefab) as GameObject;
-        //    go.transform.position = GaussianVector(x, y);
-        //}
     }
-
     
     void Update()
     {
-
         Splat();
-        
     }
 
     void Splat()
     {
-
         if (splatters.Count < splatterCount)
         {
             GameObject splatter = Instantiate(prefab) as GameObject;
             splatter.transform.position = GaussianVector(x, y);
             splatters.Add(splatter);
         }
-        
     }
 
     Vector3 GaussianVector(float width, float height)
@@ -58,4 +46,10 @@ public class ShadedColliders : MonoBehaviour
         x = windowBounds.x;
         y = windowBounds.y;
     }
+
+
+    //Make a method that keeps dropping objects until splatterCount
+    //At splatterCount, begin removing object by furthest from origin while continuing to place
+    //Radial implosion?
+    //constrain distribution bounds as objects are removed?
 }

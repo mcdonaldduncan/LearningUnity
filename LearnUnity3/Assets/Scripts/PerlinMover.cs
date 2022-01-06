@@ -23,11 +23,11 @@ public class PerlinMover : MonoBehaviour
         GameObject introMover = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         private Vector2 minimumPosition, maximumPosition;
 
-        // Range over which height varies.
+        
         float heightScale = .7f;
         float widthScale = .5f;
 
-        // Distance covered per second along X axis of Perlin plane.
+        
         float xScale = .3f;
         float yScale = .5f;
 
