@@ -2023,12 +2023,6 @@ public:
 	int32_t ___collisionCounter_4;
 	// UnityEngine.Renderer ShaderScript::r
 	Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C * ___r_5;
-	// System.Int32 ShaderScript::R
-	int32_t ___R_6;
-	// System.Int32 ShaderScript::G
-	int32_t ___G_7;
-	// System.Int32 ShaderScript::B
-	int32_t ___B_8;
 
 public:
 	inline static int32_t get_offset_of_collisionCounter_4() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___collisionCounter_4)); }
@@ -2046,30 +2040,6 @@ public:
 	{
 		___r_5 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___r_5), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_R_6() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___R_6)); }
-	inline int32_t get_R_6() const { return ___R_6; }
-	inline int32_t* get_address_of_R_6() { return &___R_6; }
-	inline void set_R_6(int32_t value)
-	{
-		___R_6 = value;
-	}
-
-	inline static int32_t get_offset_of_G_7() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___G_7)); }
-	inline int32_t get_G_7() const { return ___G_7; }
-	inline int32_t* get_address_of_G_7() { return &___G_7; }
-	inline void set_G_7(int32_t value)
-	{
-		___G_7 = value;
-	}
-
-	inline static int32_t get_offset_of_B_8() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___B_8)); }
-	inline int32_t get_B_8() const { return ___B_8; }
-	inline int32_t* get_address_of_B_8() { return &___B_8; }
-	inline void set_B_8(int32_t value)
-	{
-		___B_8 = value;
 	}
 };
 
@@ -3286,7 +3256,7 @@ IL_0029:
 		int32_t L_5 = __this->get_collisionCounter_4();
 		if ((((int32_t)L_5) < ((int32_t)1)))
 		{
-			goto IL_0108;
+			goto IL_020b;
 		}
 	}
 	{
@@ -3304,7 +3274,7 @@ IL_0029:
 		int32_t L_10 = __this->get_collisionCounter_4();
 		if ((((int32_t)L_10) < ((int32_t)2)))
 		{
-			goto IL_0108;
+			goto IL_020b;
 		}
 	}
 	{
@@ -3322,7 +3292,7 @@ IL_0029:
 		int32_t L_15 = __this->get_collisionCounter_4();
 		if ((((int32_t)L_15) < ((int32_t)3)))
 		{
-			goto IL_0108;
+			goto IL_020b;
 		}
 	}
 	{
@@ -3340,7 +3310,7 @@ IL_0029:
 		int32_t L_20 = __this->get_collisionCounter_4();
 		if ((((int32_t)L_20) < ((int32_t)4)))
 		{
-			goto IL_0108;
+			goto IL_020b;
 		}
 	}
 	{
@@ -3358,7 +3328,7 @@ IL_0029:
 		int32_t L_25 = __this->get_collisionCounter_4();
 		if ((((int32_t)L_25) < ((int32_t)5)))
 		{
-			goto IL_0108;
+			goto IL_020b;
 		}
 	}
 	{
@@ -3372,9 +3342,99 @@ IL_0029:
 		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_29;
 		L_29 = Color32_op_Implicit_m63F14F1A14B1A9A3EE4D154413EE229D3E001623(L_28, /*hidden argument*/NULL);
 		Material_set_color_mC3C88E2389B7132EBF3EB0D1F040545176B795C0(L_27, L_29, /*hidden argument*/NULL);
+		// if (collisionCounter >= 6)
+		int32_t L_30 = __this->get_collisionCounter_4();
+		if ((((int32_t)L_30) < ((int32_t)6)))
+		{
+			goto IL_020b;
+		}
+	}
+	{
+		// r.material.color = new Color32(0, 156, 143, 1);
+		Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C * L_31 = __this->get_r_5();
+		Material_t8927C00353A72755313F046D0CE85178AE8218EE * L_32;
+		L_32 = Renderer_get_material_mE6B01125502D08EE0D6DFE2EAEC064AD9BB31804(L_31, /*hidden argument*/NULL);
+		Color32_tDB54A78627878A7D2DE42BB028D64306A18E858D  L_33;
+		memset((&L_33), 0, sizeof(L_33));
+		Color32__ctor_m9D07EC69256BB7ED2784E543848DE7B8484A5C94((&L_33), (uint8_t)0, (uint8_t)((int32_t)156), (uint8_t)((int32_t)143), (uint8_t)1, /*hidden argument*/NULL);
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_34;
+		L_34 = Color32_op_Implicit_m63F14F1A14B1A9A3EE4D154413EE229D3E001623(L_33, /*hidden argument*/NULL);
+		Material_set_color_mC3C88E2389B7132EBF3EB0D1F040545176B795C0(L_32, L_34, /*hidden argument*/NULL);
+		// if (collisionCounter >= 7)
+		int32_t L_35 = __this->get_collisionCounter_4();
+		if ((((int32_t)L_35) < ((int32_t)7)))
+		{
+			goto IL_020b;
+		}
+	}
+	{
+		// r.material.color = new Color32(35, 170, 143, 1);
+		Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C * L_36 = __this->get_r_5();
+		Material_t8927C00353A72755313F046D0CE85178AE8218EE * L_37;
+		L_37 = Renderer_get_material_mE6B01125502D08EE0D6DFE2EAEC064AD9BB31804(L_36, /*hidden argument*/NULL);
+		Color32_tDB54A78627878A7D2DE42BB028D64306A18E858D  L_38;
+		memset((&L_38), 0, sizeof(L_38));
+		Color32__ctor_m9D07EC69256BB7ED2784E543848DE7B8484A5C94((&L_38), (uint8_t)((int32_t)35), (uint8_t)((int32_t)170), (uint8_t)((int32_t)143), (uint8_t)1, /*hidden argument*/NULL);
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_39;
+		L_39 = Color32_op_Implicit_m63F14F1A14B1A9A3EE4D154413EE229D3E001623(L_38, /*hidden argument*/NULL);
+		Material_set_color_mC3C88E2389B7132EBF3EB0D1F040545176B795C0(L_37, L_39, /*hidden argument*/NULL);
+		// if (collisionCounter >= 8)
+		int32_t L_40 = __this->get_collisionCounter_4();
+		if ((((int32_t)L_40) < ((int32_t)8)))
+		{
+			goto IL_020b;
+		}
+	}
+	{
+		// r.material.color = new Color32(63, 183, 141, 1);
+		Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C * L_41 = __this->get_r_5();
+		Material_t8927C00353A72755313F046D0CE85178AE8218EE * L_42;
+		L_42 = Renderer_get_material_mE6B01125502D08EE0D6DFE2EAEC064AD9BB31804(L_41, /*hidden argument*/NULL);
+		Color32_tDB54A78627878A7D2DE42BB028D64306A18E858D  L_43;
+		memset((&L_43), 0, sizeof(L_43));
+		Color32__ctor_m9D07EC69256BB7ED2784E543848DE7B8484A5C94((&L_43), (uint8_t)((int32_t)63), (uint8_t)((int32_t)183), (uint8_t)((int32_t)141), (uint8_t)1, /*hidden argument*/NULL);
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_44;
+		L_44 = Color32_op_Implicit_m63F14F1A14B1A9A3EE4D154413EE229D3E001623(L_43, /*hidden argument*/NULL);
+		Material_set_color_mC3C88E2389B7132EBF3EB0D1F040545176B795C0(L_42, L_44, /*hidden argument*/NULL);
+		// if (collisionCounter >= 9)
+		int32_t L_45 = __this->get_collisionCounter_4();
+		if ((((int32_t)L_45) < ((int32_t)((int32_t)9))))
+		{
+			goto IL_020b;
+		}
+	}
+	{
+		// r.material.color = new Color32(91, 196, 137, 1);
+		Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C * L_46 = __this->get_r_5();
+		Material_t8927C00353A72755313F046D0CE85178AE8218EE * L_47;
+		L_47 = Renderer_get_material_mE6B01125502D08EE0D6DFE2EAEC064AD9BB31804(L_46, /*hidden argument*/NULL);
+		Color32_tDB54A78627878A7D2DE42BB028D64306A18E858D  L_48;
+		memset((&L_48), 0, sizeof(L_48));
+		Color32__ctor_m9D07EC69256BB7ED2784E543848DE7B8484A5C94((&L_48), (uint8_t)((int32_t)91), (uint8_t)((int32_t)196), (uint8_t)((int32_t)137), (uint8_t)1, /*hidden argument*/NULL);
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_49;
+		L_49 = Color32_op_Implicit_m63F14F1A14B1A9A3EE4D154413EE229D3E001623(L_48, /*hidden argument*/NULL);
+		Material_set_color_mC3C88E2389B7132EBF3EB0D1F040545176B795C0(L_47, L_49, /*hidden argument*/NULL);
+		// if (collisionCounter >= 10)
+		int32_t L_50 = __this->get_collisionCounter_4();
+		if ((((int32_t)L_50) < ((int32_t)((int32_t)10))))
+		{
+			goto IL_020b;
+		}
+	}
+	{
+		// r.material.color = new Color32(119, 209, 131, 1);
+		Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C * L_51 = __this->get_r_5();
+		Material_t8927C00353A72755313F046D0CE85178AE8218EE * L_52;
+		L_52 = Renderer_get_material_mE6B01125502D08EE0D6DFE2EAEC064AD9BB31804(L_51, /*hidden argument*/NULL);
+		Color32_tDB54A78627878A7D2DE42BB028D64306A18E858D  L_53;
+		memset((&L_53), 0, sizeof(L_53));
+		Color32__ctor_m9D07EC69256BB7ED2784E543848DE7B8484A5C94((&L_53), (uint8_t)((int32_t)119), (uint8_t)((int32_t)209), (uint8_t)((int32_t)131), (uint8_t)1, /*hidden argument*/NULL);
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_54;
+		L_54 = Color32_op_Implicit_m63F14F1A14B1A9A3EE4D154413EE229D3E001623(L_53, /*hidden argument*/NULL);
+		Material_set_color_mC3C88E2389B7132EBF3EB0D1F040545176B795C0(L_52, L_54, /*hidden argument*/NULL);
 	}
 
-IL_0108:
+IL_020b:
 	{
 		// }
 		return;

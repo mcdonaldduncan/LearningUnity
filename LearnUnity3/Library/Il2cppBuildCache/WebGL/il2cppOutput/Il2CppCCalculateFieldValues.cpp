@@ -62626,12 +62626,6 @@ public:
 	int32_t ___collisionCounter_4;
 	// UnityEngine.Renderer ShaderScript::r
 	Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C * ___r_5;
-	// System.Int32 ShaderScript::R
-	int32_t ___R_6;
-	// System.Int32 ShaderScript::G
-	int32_t ___G_7;
-	// System.Int32 ShaderScript::B
-	int32_t ___B_8;
 
 public:
 	inline static int32_t get_offset_of_collisionCounter_4() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___collisionCounter_4)); }
@@ -62649,30 +62643,6 @@ public:
 	{
 		___r_5 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___r_5), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_R_6() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___R_6)); }
-	inline int32_t get_R_6() const { return ___R_6; }
-	inline int32_t* get_address_of_R_6() { return &___R_6; }
-	inline void set_R_6(int32_t value)
-	{
-		___R_6 = value;
-	}
-
-	inline static int32_t get_offset_of_G_7() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___G_7)); }
-	inline int32_t get_G_7() const { return ___G_7; }
-	inline int32_t* get_address_of_G_7() { return &___G_7; }
-	inline void set_G_7(int32_t value)
-	{
-		___G_7 = value;
-	}
-
-	inline static int32_t get_offset_of_B_8() { return static_cast<int32_t>(offsetof(ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF, ___B_8)); }
-	inline int32_t get_B_8() const { return ___B_8; }
-	inline int32_t* get_address_of_B_8() { return &___B_8; }
-	inline void set_B_8(int32_t value)
-	{
-		___B_8 = value;
 	}
 };
 
@@ -72739,13 +72709,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1877[6] =
 	ShadedColliders_t5B36913BD290DCA8462C364AB8FAC4E5F9B124D6::get_offset_of_x_8(),
 	ShadedColliders_t5B36913BD290DCA8462C364AB8FAC4E5F9B124D6::get_offset_of_y_9(),
 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1878[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1878[2] = 
 {
 	ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF::get_offset_of_collisionCounter_4(),
 	ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF::get_offset_of_r_5(),
-	ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF::get_offset_of_R_6(),
-	ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF::get_offset_of_G_7(),
-	ShaderScript_t34AAA90F9DA492F0DE93541C444DF2508129EEEF::get_offset_of_B_8(),
 };
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1880[1] = 
 {
