@@ -10,7 +10,6 @@ public class PerlinMover : MonoBehaviour
     {
         perlinMover = new Mover();
     }
-
     
     void FixedUpdate()
     {
@@ -23,10 +22,8 @@ public class PerlinMover : MonoBehaviour
         GameObject introMover = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         private Vector2 minimumPosition, maximumPosition;
 
-        
         float heightScale = .7f;
         float widthScale = .5f;
-
         
         float xScale = .3f;
         float yScale = .5f;
@@ -44,8 +41,6 @@ public class PerlinMover : MonoBehaviour
             location = introMover.transform.position;
             float incrementx = widthScale * Mathf.PerlinNoise(Time.time * xScale, 0.0f);
             float incrementy = heightScale * Mathf.PerlinNoise(0.0f, Time.time * yScale);
-
-
             location.x += incrementx;
             location.y += incrementy;
             introMover.transform.position += location;

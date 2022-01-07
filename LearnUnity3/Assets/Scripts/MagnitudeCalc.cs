@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Nature of Code Unity
+
 public class MagnitudeCalc : MonoBehaviour
 {
     [SerializeField] Camera cam;

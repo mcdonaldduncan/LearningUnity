@@ -13,7 +13,6 @@ public class LineRendering : MonoBehaviour
     Vector2 centerPos;
     List<GameObject> nodes = new List<GameObject>();
 
-    // Start is called before the first frame update
     void Start()
     {
         lineRenderer = centerSphere.AddComponent<LineRenderer>();
@@ -21,7 +20,6 @@ public class LineRendering : MonoBehaviour
         centerPos = (Vector2)centerSphere.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         nodeCount = nodes.Count;

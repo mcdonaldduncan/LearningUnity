@@ -47,7 +47,6 @@ public class ShadedColliders : MonoBehaviour
         y = windowBounds.y;
     }
 
-
     //Make a method that keeps dropping objects until splatterCount
     //At splatterCount, begin removing object by furthest from origin while continuing to place
     //Radial implosion?
