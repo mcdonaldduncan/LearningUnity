@@ -39,7 +39,7 @@ public class VectorTests : MonoBehaviour
     {
         Camera.main.orthographic = true;
         windowLimits = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        x = windowLimits.x;
-        y = windowLimits.y;
+        x = windowLimits.x - 10f;
+        y = windowLimits.y - 1.5f;
     }
 }
