@@ -489,4 +489,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/ModTheCube/Scene.unity
-  playerPath: D:/Unity/ModCube/WebGL Builds
+  playerPath: C:/Users/dfmcd/Documents/GitHub/LearningUnity/ModCube/WebGL Builds
