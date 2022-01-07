@@ -27,10 +27,10 @@ public class Cube : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
-    {
-        InvokeRepeating("ChangeColor", .01f, 1.0f);
-    }
+    //private void OnMouseDown()
+    //{
+    //    InvokeRepeating("ChangeColor", .01f, 1.0f);
+    //}
 
     void Update()
     {
