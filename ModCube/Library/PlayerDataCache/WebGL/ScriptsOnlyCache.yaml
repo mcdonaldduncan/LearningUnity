@@ -44,9 +44,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2216}
+      Script: {instanceID: 2230}
     - Class: 114
-      Script: {instanceID: 19570}
+      Script: {instanceID: 3548}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -386,6 +386,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 27437367fcdf20a3c575c99e7c81ffca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Controller
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -480,12 +486,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 27437367fcdf20a3c575c99e7c81ffca
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Controller
   platform: 20
   scenePathNames:
   - Assets/ModTheCube/Scene.unity
