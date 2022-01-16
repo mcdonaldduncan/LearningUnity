@@ -32,6 +32,8 @@ public class Cube : MonoBehaviour
     //    InvokeRepeating("ChangeColor", .01f, 1.0f);
     //}
 
+    
+
     void Update()
     {
         transform.Rotate(x * Time.deltaTime, y * Time.deltaTime, z * Time.deltaTime);

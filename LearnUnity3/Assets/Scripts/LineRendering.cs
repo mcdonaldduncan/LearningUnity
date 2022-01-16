@@ -7,10 +7,10 @@ public class LineRendering : MonoBehaviour
     [SerializeField] GameObject centerSphere;
     [SerializeField] GameObject mouseSphere;
     [SerializeField] Camera cam;
-    [SerializeField] int nodeCount;
 
     LineRenderer lineRenderer;
     Vector2 centerPos;
+
     List<GameObject> nodes = new List<GameObject>();
 
     void Start()
@@ -22,7 +22,6 @@ public class LineRendering : MonoBehaviour
 
     void Update()
     {
-        nodeCount = nodes.Count;
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 followerPos = subtractVectors(mousePos, centerPos);
         mouseSphere.transform.position = followerPos;
@@ -37,7 +36,7 @@ public class LineRendering : MonoBehaviour
             lineRenderer.SetPosition(1, followerPos);
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonDown(0))
         {
             GameObject node = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             node.transform.position = mousePos;
