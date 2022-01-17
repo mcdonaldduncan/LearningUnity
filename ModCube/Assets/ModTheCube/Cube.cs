@@ -24,15 +24,7 @@ public class Cube : MonoBehaviour
         material.color = new Color(r, g, b, a);
         //InvokeRepeating("ChangeColor", .01f, 1.0f);
         StartCoroutine(ChangeColor(2));
-
     }
-
-    //private void OnMouseDown()
-    //{
-    //    InvokeRepeating("ChangeColor", .01f, 1.0f);
-    //}
-
-    
 
     void Update()
     {
@@ -48,6 +40,5 @@ public class Cube : MonoBehaviour
         a = Random.Range(0.0f, 1.0f);
         material.color = new Color(r, g, b, a);
         StartCoroutine(ChangeColor(seconds));
-
     }
 }
