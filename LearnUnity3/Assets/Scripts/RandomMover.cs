@@ -6,13 +6,11 @@ public class RandomMover : MonoBehaviour
 {
     Mover mover;
     int[] numbers = new[] { 1, 1, 2, 3, 3 };
-    
 
     // Start is called before the first frame update
     void Start()
     {
         mover = new Mover();
-        
     }
 
     // Update is called once per frame
