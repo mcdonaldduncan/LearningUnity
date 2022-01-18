@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class ConsumingCollider : MonoBehaviour
 {
-    [SerializeField] Vector2 velocity;
+    Vector2 velocity;
     Vector2 location;
     float x, y;
     Vector3 windowLimits;
 
     void Start()
     {
-        transform.position = Vector3.zero;
-        transform.localScale = Vector3.one * 1.5f;
+        transform.localScale = Vector3.one * Random.Range(.1f, 5.0f);
         location = transform.position;
-        //speed = new Vector2(0.1f, 0.1f);
+        velocity = new Vector2 (Random.Range(-.02f, .02f), Random.Range(-.02f, .02f));
         FindWindowLimits();
     }
 
@@ -33,11 +32,30 @@ public class ConsumingCollider : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (transform.localScale.magnitude > collision.gameObject.transform.localScale.magnitude)
+        {
+            Destroy(collision.gameObject);
+        }
+        
+    }
+
     void FindWindowLimits()
     {
         Camera.main.orthographic = true;
         windowLimits = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        x = windowLimits.x - 10f;
-        y = windowLimits.y - 1.5f;
+        x = windowLimits.x;
+        y = windowLimits.y;
+    }
+
+    bool IsSphereCollision(Collision collision)
+    {
+        ConsumingCollider sphere = collision.gameObject.GetComponent<ConsumingCollider>();
+        if (sphere != null)
+        {
+            return true;
+        }
+        return false;
     }
 }
