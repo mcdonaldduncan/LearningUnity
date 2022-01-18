@@ -38,7 +38,6 @@ public class ConsumingCollider : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        
     }
 
     void FindWindowLimits()

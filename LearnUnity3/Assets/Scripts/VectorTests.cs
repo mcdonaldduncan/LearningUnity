@@ -9,7 +9,6 @@ public class VectorTests : MonoBehaviour
     float x, y;
     Vector3 windowLimits;
 
-    // Start is called before the first frame update
     void Start()
     {
         transform.position = Vector3.zero;
@@ -19,7 +18,6 @@ public class VectorTests : MonoBehaviour
         FindWindowLimits();
     }
 
-    // Update is called once per frame
     void Update()
     {
         location += velocity;
@@ -32,7 +30,6 @@ public class VectorTests : MonoBehaviour
         {
             velocity.y = -velocity.y;
         }
-        
     }
 
     void FindWindowLimits()

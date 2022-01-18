@@ -10,7 +10,7 @@ public class ShaderScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         collisionCounter++;
-        Debug.Log("collision detected");
+        //Debug.Log("collision detected");
     }
 
     void Update()
