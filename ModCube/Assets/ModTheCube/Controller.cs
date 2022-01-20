@@ -6,8 +6,7 @@ public class Controller : MonoBehaviour
 {
     [SerializeField] int cubeCount = 100;
     [SerializeField] GameObject cube;
-
-    List<GameObject> cubes = new List<GameObject>();
+    List<GameObject> cubes = new();
     Vector3 windowBounds;
     float x, y;
 
