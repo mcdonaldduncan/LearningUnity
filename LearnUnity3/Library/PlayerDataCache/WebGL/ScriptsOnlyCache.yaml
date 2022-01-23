@@ -52,27 +52,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1588}
+      Script: {instanceID: 1586}
     - Class: 114
-      Script: {instanceID: 1748}
+      Script: {instanceID: 1746}
     - Class: 114
-      Script: {instanceID: 1840}
+      Script: {instanceID: 1838}
     - Class: 114
-      Script: {instanceID: 1902}
+      Script: {instanceID: 1900}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2030}
     - Class: 114
-      Script: {instanceID: 2478}
+      Script: {instanceID: 2476}
     - Class: 114
-      Script: {instanceID: 3214}
+      Script: {instanceID: 3212}
     - Class: 114
-      Script: {instanceID: 3750}
+      Script: {instanceID: 3748}
     - Class: 114
-      Script: {instanceID: 3862}
+      Script: {instanceID: 3860}
     - Class: 114
-      Script: {instanceID: 4010}
+      Script: {instanceID: 4008}
     - Class: 114
-      Script: {instanceID: 4132}
+      Script: {instanceID: 4130}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -783,4 +783,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/Draw Lines.unity
-  playerPath: C:/Users/dfmcd/Documents/GitHub/LearningUnity/LearnUnity3/Builds
+  playerPath: C:/Users/dfmcd/Documents/GitHub/LearningUnity/LearnUnity3/Builds/AltBuild
