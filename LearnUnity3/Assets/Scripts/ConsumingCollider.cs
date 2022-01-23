@@ -57,5 +57,4 @@ public class ConsumingCollider : MonoBehaviour
         }
         return false;
     }
-
 }
