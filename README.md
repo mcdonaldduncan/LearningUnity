@@ -15,3 +15,6 @@ Check out this independent experiment featuring shaded entities spread within a 
 ModCube: Independent Study - Unity Certification Progress
 [WebGL Build](https://mcdonaldduncan.github.io/LearningUnity/ModCube/WebGL%20Builds/index.html)
 
+Line Rendering/Pathfinding Independent Study
+[WebGL Build](https://mcdonaldduncan.github.io/LearningUnity/LearnUnity3/Builds/AltBuild/index.html)
+
