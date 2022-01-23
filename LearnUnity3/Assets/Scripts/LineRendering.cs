@@ -25,7 +25,7 @@ public class LineRendering : MonoBehaviour
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 followerPos = subtractVectors(mousePos, centerPos);
         mouseSphere.transform.position = followerPos;
-        if (nodes.Count <= 0)
+        if (nodes.Count == 0)
         {
             lineRenderer.SetPosition(0, centerPos);
             lineRenderer.SetPosition(1, followerPos);
