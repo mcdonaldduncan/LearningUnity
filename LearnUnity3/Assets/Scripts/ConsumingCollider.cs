@@ -58,19 +58,4 @@ public class ConsumingCollider : MonoBehaviour
         return false;
     }
 
-    //Roommate Duncan = new Roommate("Duncan", "He/Him/His", "Programming, Reading and Games");
-
-    //public class Roommate
-    //{
-    //    string name;
-    //    string pronouns;
-    //    string hobbies;
-
-    //    public Roommate(string n, string p, string h)
-    //    {
-    //        name = n;
-    //        pronouns = p;
-    //        hobbies = h;
-    //    }
-    //}
 }
