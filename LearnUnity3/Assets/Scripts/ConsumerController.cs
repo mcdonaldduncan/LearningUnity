@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConsumerController : MonoBehaviour
 {
-    [SerializeField] int sphereCount = 100;
+    [SerializeField] int sphereCount = 1000;
     [SerializeField] GameObject sphere;
 
     List<GameObject> spheres = new List<GameObject>();
