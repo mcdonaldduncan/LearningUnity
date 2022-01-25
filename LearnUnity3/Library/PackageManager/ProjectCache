@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637786524723117252
+      ticks: 637786700270581711
     m_Hash: 1680416216
   m_LockFileStatus:
     m_FilePath: C:/Users/380939/Documents/GitHub/LearningUnity/LearnUnity3/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637786524723117252
+      ticks: 637786700270591512
     m_Hash: 3675475164
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -466,7 +466,7 @@ m_ResolvedPackages:
   hasRepository: 1
   repository:
     type: git
-    url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
+    url: https://github.com/Unity-Technologies/com.unity.test-framework.git
     revision: dac53542acdab7a12e9ebf111ac588d0e53cf483
     path: 
   unityLifecycle:

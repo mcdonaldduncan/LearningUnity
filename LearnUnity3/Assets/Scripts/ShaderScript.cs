@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ShaderScript : MonoBehaviour
 {
-    [SerializeField] int collisionCounter;
     [SerializeField] Renderer r;
-    
+    int collisionCounter;
+
     private void OnCollisionEnter(Collision collision)
     {
         collisionCounter++;

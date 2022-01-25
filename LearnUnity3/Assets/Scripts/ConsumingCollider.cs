@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConsumingCollider : MonoBehaviour
 {
+    [SerializeField] Renderer r;
     Vector2 velocity;
     Vector2 location;
     float x, y;
@@ -29,14 +30,20 @@ public class ConsumingCollider : MonoBehaviour
         {
             velocity.y = -velocity.y;
         }
-
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnEnable()
+    {
+        r.material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+    }
+
+    void OnCollisionEnter(Collision collision)
     {
         if (transform.localScale.magnitude > collision.gameObject.transform.localScale.magnitude)
         {
             Destroy(collision.gameObject);
+            r.material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
         }
     }
 
