@@ -27,7 +27,7 @@ public class ShadedColliders : MonoBehaviour
     {
         if (splatters.Count < splatterCount)
         {
-            GameObject splatter = Instantiate(prefab) as GameObject;
+            GameObject splatter = Instantiate(prefab);
             splatter.transform.position = GaussianVector(x, y);
             splatters.Add(splatter);
         }
