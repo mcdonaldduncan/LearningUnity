@@ -7,7 +7,7 @@ LearnUnity1: Original project by Jason Weimann
 
 LearnUnity2: Original project by Jason Weimann
 
-LearnUnity3: Study Projects from Nature of Code Unity and Original Experimentation
+LearnUnity3&4: Study Projects from Nature of Code Unity and Original Experimentation
 
 Independent experiment featuring shaded entities spread within a Gaussian distribution.
 [WebGL Build](https://mcdonaldduncan.github.io/LearningUnity/LearnUnity4/Builds/index.html)
