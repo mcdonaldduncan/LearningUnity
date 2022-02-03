@@ -15,7 +15,7 @@ public class Clock : MonoBehaviour
     void Start()
     {
         FindWindowLimits();
-        rectTransform.position = new Vector3(-windowLimits.x + 3.0f, -windowLimits.y + 4.0f, 0);
+        rectTransform.position = new Vector3(-windowLimits.x + 3.0f, -windowLimits.y + 2.0f, 0);
     }
 
     // Update is called once per frame
