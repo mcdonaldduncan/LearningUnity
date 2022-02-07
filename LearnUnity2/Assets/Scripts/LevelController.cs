@@ -20,8 +20,6 @@ public class LevelController : MonoBehaviour
     {
         if (MonstersAreAllDead())
             GoToNextLevel();
-
-        
     }
 
     void GoToNextLevel()

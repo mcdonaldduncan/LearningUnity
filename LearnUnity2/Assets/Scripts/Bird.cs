@@ -79,7 +79,7 @@ public class Bird : MonoBehaviour
         {
             if (_isFlying)
             {
-                BirdExplode();
+                //BirdExplode();
             }
         }
     }
