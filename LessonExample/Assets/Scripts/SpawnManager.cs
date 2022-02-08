@@ -7,14 +7,15 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject[] enemies = new GameObject[3];
     [SerializeField] GameObject fireballPrefab;
     [SerializeField] int fireballDelay = 1;
-    [SerializeField] float startDelay = 2f;
-    [SerializeField] float repeatRate = 2.5f;
-
+    
     [System.NonSerialized] public Vector3 windowLimits;
     [System.NonSerialized] public bool isFireballPresent = true;
     [System.NonSerialized] public bool isLoadingFireball = false;
 
     Vector3 startPosition = new Vector3(-6, -1, 0);
+
+    float startDelay = 2f;
+    float repeatRate = 2.5f;
 
     void Start()
     {
@@ -27,10 +28,6 @@ public class SpawnManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             StartCoroutine(CreateNewFireballAfterDelay(fireballDelay));
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log(Time.time);
         }
     }
 
