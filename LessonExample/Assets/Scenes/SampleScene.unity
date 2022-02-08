@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -323,7 +323,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   fireballPrefab: {fileID: 6018360573705272796, guid: c9a6954f73ec4c146bb3cec927259a33, type: 3}
-  fireballDelay: 2
+  fireballDelay: 1
+  startDelay: 2
+  repeatRate: 1.5
 --- !u!4 &2081963586
 Transform:
   m_ObjectHideFlags: 0
