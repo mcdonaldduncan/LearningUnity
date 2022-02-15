@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    [System.NonSerialized] public int health = 3;
-
     Transform target;
     SpawnManager spawnManager;
 
-    float speed = 3f;
+    float speed = 1f;
 
     void Start()
     {
         spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         target = GameObject.Find("Dragon").GetComponent<Transform>();
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        health--;
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-        
     }
 
     void Update()

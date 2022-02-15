@@ -206,32 +206,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1099259035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2947606112405044699, guid: 681e79bb95775d041b20eecde4ff4e2c, type: 3}
-  m_PrefabInstance: {fileID: 2947606112119450965}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1099259039
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1099259035}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1304109782
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,10 +326,14 @@ MonoBehaviour:
 <<<<<<< HEAD
   fireballDelay: 1
   startDelay: 2
+<<<<<<< HEAD
   repeatRate: 2
 =======
   fireballDelay: 2
 >>>>>>> parent of 8903af7a (update)
+=======
+  repeatRate: 1.5
+>>>>>>> parent of 4f631d6c (update)
 --- !u!4 &2081963586
 Transform:
   m_ObjectHideFlags: 0
