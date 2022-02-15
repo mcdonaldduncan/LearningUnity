@@ -12,13 +12,14 @@ public class SpawnManager : MonoBehaviour
     [System.NonSerialized] public bool isFireballPresent = true;
     [System.NonSerialized] public bool isLoadingFireball = false;
 
-    Vector3 startPosition = new Vector3(-6, -1, 0);
+    Vector3 startPosition;
 
     float startDelay = 2f;
     float repeatRate = 2.5f;
 
     void Start()
     {
+        startPosition = fireballPrefab.transform.position;
         FindWindowLimits();
         InvokeRepeating("SpawnEnemy", startDelay, repeatRate);
     }
@@ -39,7 +40,8 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnEnemy()
     {
-        GameObject enemy = Instantiate(enemies[0]);
+        int enemyIndex = Random.Range(0, 3);
+        GameObject enemy = Instantiate(enemies[enemyIndex]);
         enemy.transform.position = new Vector3(windowLimits.x + 1, Random.Range(-windowLimits.y, windowLimits.y), 0);
     }
 
