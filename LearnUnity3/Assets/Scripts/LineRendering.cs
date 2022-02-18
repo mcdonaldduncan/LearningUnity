@@ -18,7 +18,7 @@ public class LineRendering : MonoBehaviour
     {
         lineRenderer = centerSphere.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Diffuse"));
-        centerPos = (Vector2)centerSphere.transform.position;
+        centerPos = centerSphere.transform.position;
     }
 
     void Update()
@@ -26,6 +26,7 @@ public class LineRendering : MonoBehaviour
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 followerPos = subtractVectors(mousePos, centerPos);
         mouseSphere.transform.position = followerPos;
+
         if (nodes.Count == 0)
         {
             lineRenderer.SetPosition(0, centerPos);
