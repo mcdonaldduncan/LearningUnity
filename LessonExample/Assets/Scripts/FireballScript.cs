@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Utility;
 
 public class FireballScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class FireballScript : MonoBehaviour
     SpawnManager spawnManager;
 
     Vector3 startPosition;
+    Vector3 windowLimits;
 
     bool isFlying;
 
@@ -21,6 +23,7 @@ public class FireballScript : MonoBehaviour
 
     void Start()
     {
+        windowLimits = FindWindowLimits();
         startPosition = _rigidbody2D.position;
         _rigidbody2D.isKinematic = true;
     }
@@ -56,11 +59,11 @@ public class FireballScript : MonoBehaviour
 
     void CheckLimits()
     {
-        if (transform.position.x > spawnManager.windowLimits.x)
+        if (transform.position.x > windowLimits.x)
         {
             Destroy(gameObject);
         }
-        if (transform.position.y > spawnManager.windowLimits.y || transform.position.y < -spawnManager.windowLimits.y)
+        if (transform.position.y > windowLimits.y || transform.position.y < -windowLimits.y)
         {
             Destroy(gameObject);
         }

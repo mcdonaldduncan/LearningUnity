@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Utility;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class EnemyBehavior : MonoBehaviour
     Transform target;
     SpawnManager spawnManager;
 
+    Vector3 windowLimits;
+
     void Start()
     {
+        windowLimits = FindWindowLimits();
         spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         target = GameObject.Find("Dragon").GetComponent<Transform>();
     }
@@ -30,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-        if (transform.position.x < -spawnManager.windowLimits.x)
+        if (transform.position.x < -windowLimits.x)
         {
             Destroy(gameObject);
         }

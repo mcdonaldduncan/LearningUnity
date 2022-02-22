@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Utility;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -8,11 +9,12 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject fireballPrefab;
     [SerializeField] int fireballDelay = 1;
     
-    [System.NonSerialized] public Vector3 windowLimits;
+    
     [System.NonSerialized] public bool isFireballPresent = true;
     [System.NonSerialized] public bool isLoadingFireball = false;
 
     Vector3 startPosition;
+    Vector3 windowLimits;
 
     float startDelay = 2f;
     float repeatRate = 2.5f;
@@ -20,7 +22,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         startPosition = fireballPrefab.transform.position;
-        FindWindowLimits();
+        windowLimits = FindWindowLimits();
         InvokeRepeating("SpawnEnemy", startDelay, repeatRate);
     }
 
@@ -32,11 +34,6 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    void FindWindowLimits()
-    {
-        Camera.main.transform.position = new Vector3(0, 0, -10);
-        windowLimits = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-    }
 
     void SpawnEnemy()
     {
