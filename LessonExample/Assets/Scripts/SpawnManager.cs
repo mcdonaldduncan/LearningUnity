@@ -33,7 +33,6 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-
     void SpawnEnemy()
     {
         int enemyIndex = Random.Range(0, 3);
@@ -56,6 +55,5 @@ public class SpawnManager : MonoBehaviour
             isFireballPresent = true;
             isLoadingFireball = false;
         }
-        
     }
 }
