@@ -9,7 +9,6 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject fireballPrefab;
     [SerializeField] int fireballDelay = 1;
     
-    
     [System.NonSerialized] public bool isFireballPresent = true;
     [System.NonSerialized] public bool isLoadingFireball = false;
 
