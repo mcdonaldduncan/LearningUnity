@@ -308,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2947606112405044699, guid: 681e79bb95775d041b20eecde4ff4e2c, type: 3}
       propertyPath: m_Name
-      value: Dragon
+      value: Launcher
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 681e79bb95775d041b20eecde4ff4e2c, type: 3}

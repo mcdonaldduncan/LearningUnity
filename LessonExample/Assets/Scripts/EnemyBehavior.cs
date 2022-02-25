@@ -15,7 +15,7 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         windowLimits = FindWindowLimits();
-        target = GameObject.Find("Dragon").GetComponent<Transform>();
+        target = GameObject.Find("Launcher").GetComponent<Transform>();
     }
 
 
