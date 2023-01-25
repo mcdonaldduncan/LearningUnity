@@ -14,13 +14,12 @@ public class VectorTests : MonoBehaviour
         transform.position = Vector3.zero;
         transform.localScale = Vector3.one * 1.5f;
         location = transform.position;
-        //speed = new Vector2(0.1f, 0.1f);
         FindWindowLimits();
     }
 
     void Update()
     {
-        location += velocity;
+        location += velocity * Time.deltaTime;
         transform.position = location;
         if (location.x > x || location.x < -x)
         {
