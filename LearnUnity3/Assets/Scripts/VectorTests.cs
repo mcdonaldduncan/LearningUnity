@@ -19,23 +19,37 @@ public class VectorTests : MonoBehaviour
 
     void Update()
     {
-        location += velocity * Time.deltaTime;
-        transform.position = location;
-        if (location.x > x || location.x < -x)
+        transform.position += (Vector3)velocity * Time.deltaTime;
+
+        if (transform.position.x > x)
         {
             velocity.x = -velocity.x;
+            transform.position = new Vector3(x, transform.position.y, 0);
         }
-        if (location.y > y || location.y < -y)
+        if (transform.position.x < -x)
+        {
+            velocity.x = -velocity.x;
+            transform.position = new Vector3(-x, transform.position.y, 0);
+        }
+        if (transform.position.y > y)
         {
             velocity.y = -velocity.y;
+            transform.position = new Vector3(transform.position.x, y, 0);
+        }
+        if (transform.position.y < -y)
+        {
+            velocity.y = -velocity.y;
+            transform.position = new Vector3(transform.position.x, -y, 0);
         }
     }
+
+
 
     void FindWindowLimits()
     {
         Camera.main.orthographic = true;
         windowLimits = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        x = windowLimits.x - 10f;
-        y = windowLimits.y;
+        x = windowLimits.x - 6f;
+        y = windowLimits.y - 1f;
     }
 }
